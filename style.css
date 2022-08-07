@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+body{
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    font-weight: 500;
+    font-size: 25px;
+}
+h2{
+    font-weight: 500;
+    font-size: 20px;
+    color: dimgray;
+}
+h3{
+    font-weight: 500;
+    font-size: 20px;
+}
+h4{
+    font-weight: 500;
+    font-size: 15px;
+    color: darkcyan;
+}
+.card{
+    position: relative;
+    background-color: #fff;
+    width: 350px;
+    height: 200px;
+    box-shadow: 0 25px 30px rgba(190, 163, 163, 0.475);
+    border-radius: 15px;
+    transition: all 0.5s ease-in-out;
+}
+.card:hover{
+    height: 450px;
+}
+.borders{
+    background-image: url('person4.jpg');
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translate(-50%,0%);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 150px;
+    width: 150px;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(131, 29, 29, 0.523);
+    transition: all 0.5s ease-in-out;
+}
+.card:hover .borders{
+    height: 250px;
+    width: 250px;
+}
+.information{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 125px 0px 10px 0px;
+    transition: all 0.5s ease-in-out;
+}
+.card:hover .information{
+    display: flex;
+    padding: 230px 0px 10px 0px;
+}
+.more{
+    position: relative;
+    display: flex;
+    opacity: 0;
+    z-index: -10;
+    justify-content: space-between;
+    padding: 10px 50px;
+    transform: translateX(-20px);
+    transition-timing-function: linear;
+    transition-duration: 0s, 0.2s, 0.2s;
+    transition-property: z-index,opacity,transform;
+    transition-delay: 0.2s, 0s, 0s;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.button{
+    transform: translateX(-20px);
+    transition-timing-function: linear;
+    transition-duration: 0s, 0.2s, 0.2s;
+    transition-property: z-index,opacity,transform;
+    transition-delay: 0.2s, 0s, 0s;
+    position: relative;
+    display: flex;
+    opacity: 0;
+    z-index: -10px;
+    padding: 10px 50px;
+    justify-content: space-between;
+}
+button{
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#follow{
+    background-color: chocolate;
+    border: 1px solid chocolate;
+    color: #fff;
+    font-weight: 500;
+    transition: all 0.5s linear;
+}
+#follow:hover{
+    background-color: brown;
+}
+#message{
+    background-color: transparent;
+    border: 1px solid gray;
+    color: gray;
+    font-weight: 500;
+    transition: all 0.5s linear;
+}
+#message:hover{
+    color: #fff;
+    background-color: gray;
+}
+.card:hover .more,
+.card:hover .button{
+    opacity: 1;
+    z-index: 0;
+    transform: translateX(0px);
+}
